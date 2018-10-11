@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RedCheetahModelStoreContainer" CdmEntityContainer="RCStaging">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="RedCheetahModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdPlans">
+      <EntityTypeMapping TypeName="RedCheetahModel.AdPlan">
+        <MappingFragment StoreEntitySet="AdPlans">
+          <ScalarProperty Name="AdPlanId" ColumnName="AdPlanId" />
+          <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NoVideosToPlay" ColumnName="NoVideosToPlay" />
+          <ScalarProperty Name="NoBannersToShow" ColumnName="NoBannersToShow" />
+          <ScalarProperty Name="MinTimeBetweenAds" ColumnName="MinTimeBetweenAds" />
+          <ScalarProperty Name="MaxTimeBetwenAds" ColumnName="MaxTimeBetwenAds" />
+          <ScalarProperty Name="MinDataConsumption" ColumnName="MinDataConsumption" />
+          <ScalarProperty Name="MaxDataConsumption" ColumnName="MaxDataConsumption" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="MarkedForDeletion" ColumnName="MarkedForDeletion" />
+          <ScalarProperty Name="MarkedDeletedDate" ColumnName="MarkedDeletedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceCodes">
+      <EntityTypeMapping TypeName="RedCheetahModel.DeviceCode">
+        <MappingFragment StoreEntitySet="DeviceCodes">
+          <ScalarProperty Name="DeviceCodesId" ColumnName="DeviceCodesId" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceConnects">
+      <EntityTypeMapping TypeName="RedCheetahModel.DeviceConnect">
+        <MappingFragment StoreEntitySet="DeviceConnects">
+          <ScalarProperty Name="ConnectId" ColumnName="ConnectId" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="MarkedForDeletion" ColumnName="MarkedForDeletion" />
+          <ScalarProperty Name="MarkedDeletedDate" ColumnName="MarkedDeletedDate" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="ConnectedTo" ColumnName="ConnectedTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceInfos">
+      <EntityTypeMapping TypeName="RedCheetahModel.DeviceInfo">
+        <MappingFragment StoreEntitySet="DeviceInfos">
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="SwiftId" ColumnName="SwiftId" />
+          <ScalarProperty Name="AgeRange" ColumnName="AgeRange" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="HardwareId" ColumnName="HardwareId" />
+          <ScalarProperty Name="Platform" ColumnName="Platform" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="FormFactor" ColumnName="FormFactor" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="MarkedForDeletion" ColumnName="MarkedForDeletion" />
+          <ScalarProperty Name="MarkedDeletedDate" ColumnName="MarkedDeletedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="LastTimeActive" ColumnName="LastTimeActive" />
+          <ScalarProperty Name="LastMessageId" ColumnName="LastMessageId" />
+          <ScalarProperty Name="LastMessageDate" ColumnName="LastMessageDate" />
+          <ScalarProperty Name="LastConnectId" ColumnName="LastConnectId" />
+          <ScalarProperty Name="CityOfResidence" ColumnName="CityOfResidence" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="InfoType" ColumnName="InfoType" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="MacAddress" ColumnName="MacAddress" />
+          <ScalarProperty Name="ConnectedTo" ColumnName="ConnectedTo" />
+          <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceLocations">
+      <EntityTypeMapping TypeName="RedCheetahModel.DeviceLocation">
+        <MappingFragment StoreEntitySet="DeviceLocations">
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="DeviceId" ColumnName="DeviceId" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Altitude" ColumnName="Altitude" />
+          <ScalarProperty Name="Building" ColumnName="Building" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="MarkedForDeletion" ColumnName="MarkedForDeletion" />
+          <ScalarProperty Name="MarkedDeletedDate" ColumnName="MarkedDeletedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageReads">
+      <EntityTypeMapping TypeName="RedCheetahModel.MessageRead">
+        <MappingFragment StoreEntitySet="MessageReads">
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="FromDeviceId" ColumnName="FromDeviceId" />
+          <ScalarProperty Name="ToDeviceId" ColumnName="ToDeviceId" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="Parameter1" ColumnName="Parameter1" />
+          <ScalarProperty Name="Parameter2" ColumnName="Parameter2" />
+          <ScalarProperty Name="Parameter3" ColumnName="Parameter3" />
+          <ScalarProperty Name="Parameter4" ColumnName="Parameter4" />
+          <ScalarProperty Name="Parameter5" ColumnName="Parameter5" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="MarkedForDeletion" ColumnName="MarkedForDeletion" />
+          <ScalarProperty Name="MarkedDeletedDate" ColumnName="MarkedDeletedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="RedCheetahModel.Message">
+        <MappingFragment StoreEntitySet="Messages">
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="FromDeviceId" ColumnName="FromDeviceId" />
+          <ScalarProperty Name="ToDeviceId" ColumnName="ToDeviceId" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="Parameter1" ColumnName="Parameter1" />
+          <ScalarProperty Name="Parameter2" ColumnName="Parameter2" />
+          <ScalarProperty Name="Parameter3" ColumnName="Parameter3" />
+          <ScalarProperty Name="Parameter4" ColumnName="Parameter4" />
+          <ScalarProperty Name="Parameter5" ColumnName="Parameter5" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="MarkedForDeletion" ColumnName="MarkedForDeletion" />
+          <ScalarProperty Name="MarkedDeletedDate" ColumnName="MarkedDeletedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RC_CHANNELS">
+      <EntityTypeMapping TypeName="RedCheetahModel.RC_CHANNELS">
+        <MappingFragment StoreEntitySet="RC_CHANNELS">
+          <ScalarProperty Name="CHANNEL_ID" ColumnName="CHANNEL_ID" />
+          <ScalarProperty Name="CHANNEL_NAME" ColumnName="CHANNEL_NAME" />
+          <ScalarProperty Name="SECTOR_ID" ColumnName="SECTOR_ID" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RC_LOCATIONS">
+      <EntityTypeMapping TypeName="RedCheetahModel.RC_LOCATIONS">
+        <MappingFragment StoreEntitySet="RC_LOCATIONS">
+          <ScalarProperty Name="LOCATION_ID" ColumnName="LOCATION_ID" />
+          <ScalarProperty Name="LOCATION_NAME" ColumnName="LOCATION_NAME" />
+          <ScalarProperty Name="CHANNEL_ID" ColumnName="CHANNEL_ID" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RC_MODEMS">
+      <EntityTypeMapping TypeName="RedCheetahModel.RC_MODEMS">
+        <MappingFragment StoreEntitySet="RC_MODEMS">
+          <ScalarProperty Name="MODEM_ID" ColumnName="MODEM_ID" />
+          <ScalarProperty Name="CUSTOMER_ID" ColumnName="CUSTOMER_ID" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="ACCOUNT_NAME" ColumnName="ACCOUNT_NAME" />
+          <ScalarProperty Name="LOCATION_ID" ColumnName="LOCATION_ID" />
+          <ScalarProperty Name="IMSI" ColumnName="IMSI" />
+          <ScalarProperty Name="IP_ADDRESS" ColumnName="IP_ADDRESS" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RC_SECTORS">
+      <EntityTypeMapping TypeName="RedCheetahModel.RC_SECTORS">
+        <MappingFragment StoreEntitySet="RC_SECTORS">
+          <ScalarProperty Name="SECTOR_ID" ColumnName="SECTOR_ID" />
+          <ScalarProperty Name="SECTOR_NAME" ColumnName="SECTOR_NAME" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RC_Sessions">
+      <EntityTypeMapping TypeName="RedCheetahModel.RC_Sessions">
+        <MappingFragment StoreEntitySet="RC_Sessions">
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="DeviceIMEI" ColumnName="DeviceIMEI" />
+          <ScalarProperty Name="AccessPointIPAddress" ColumnName="AccessPointIPAddress" />
+          <ScalarProperty Name="VPNIPAddress" ColumnName="VPNIPAddress" />
+          <ScalarProperty Name="SessionStartTime" ColumnName="SessionStartTime" />
+          <ScalarProperty Name="SessionEndTime" ColumnName="SessionEndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RCRegisteredDevices">
+      <EntityTypeMapping TypeName="RedCheetahModel.RCRegisteredDevice">
+        <MappingFragment StoreEntitySet="RCRegisteredDevices">
+          <ScalarProperty Name="deviceId" ColumnName="deviceId" />
+          <ScalarProperty Name="macAddress" ColumnName="macAddress" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="ageRange" ColumnName="ageRange" />
+          <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="regStatus" ColumnName="regStatus" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="agentCode" ColumnName="agentCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RedCheetahUsers">
+      <EntityTypeMapping TypeName="RedCheetahModel.RedCheetahUser">
+        <MappingFragment StoreEntitySet="RedCheetahUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AddedToRadius" ColumnName="AddedToRadius" />
+          <ScalarProperty Name="DeleteUser" ColumnName="DeleteUser" />
+          <ScalarProperty Name="MacAddress" ColumnName="MacAddress" />
+          <ScalarProperty Name="IpAddressUpdated" ColumnName="IpAddressUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceParameters">
+      <EntityTypeMapping TypeName="RedCheetahModel.ServiceParameter">
+        <MappingFragment StoreEntitySet="ServiceParameter">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="MinMessageTime" ColumnName="MinMessageTime" />
+          <ScalarProperty Name="MaxMessageTime" ColumnName="MaxMessageTime" />
+          <ScalarProperty Name="MinLastMessageTime" ColumnName="MinLastMessageTime" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="url2" ColumnName="url2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SwiftSites">
+      <EntityTypeMapping TypeName="RedCheetahModel.SwiftSite">
+        <MappingFragment StoreEntitySet="SwiftSites">
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+          <ScalarProperty Name="SiteAddress" ColumnName="SiteAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="RedCheetahModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserToDisableOrEnables">
+      <EntityTypeMapping TypeName="RedCheetahModel.UserToDisableOrEnable">
+        <MappingFragment StoreEntitySet="UserToDisableOrEnables">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ShouldEnable" ColumnName="ShouldEnable" />
+          <ScalarProperty Name="Processed" ColumnName="Processed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RC_MODEM_INFORMATION">
+      <EntityTypeMapping TypeName="RedCheetahModel.RC_MODEM_INFORMATION">
+        <MappingFragment StoreEntitySet="RC_MODEM_INFORMATION">
+          <ScalarProperty Name="SECTOR_NAME" ColumnName="SECTOR_NAME" />
+          <ScalarProperty Name="CHANNEL_NAME" ColumnName="CHANNEL_NAME" />
+          <ScalarProperty Name="LOCATION_NAME" ColumnName="LOCATION_NAME" />
+          <ScalarProperty Name="ACCOUNT_NAME" ColumnName="ACCOUNT_NAME" />
+          <ScalarProperty Name="IMSI" ColumnName="IMSI" />
+          <ScalarProperty Name="ACCOUNT_ID" ColumnName="ACCOUNT_ID" />
+          <ScalarProperty Name="IP_ADDRESS" ColumnName="IP_ADDRESS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="RedCheetahModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="RedCheetahModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="RedCheetahModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="RedCheetahModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RedCheetahModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="RedCheetahModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RedCheetahModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="RedCheetahModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="RedCheetahModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="RedCheetahVerifications">
+      <EntityTypeMapping TypeName="RedCheetahModel.RedCheetahVerification">
+        <MappingFragment StoreEntitySet="RedCheetahVerifications">
+          <ScalarProperty Name="VerificationStatus" ColumnName="VerificationStatus" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="VerificationCode" ColumnName="VerificationCode" />
+          <ScalarProperty Name="Guid" ColumnName="Guid" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

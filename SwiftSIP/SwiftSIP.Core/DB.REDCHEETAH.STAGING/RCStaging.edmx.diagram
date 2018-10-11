@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b9364645d9e44a58a9d3be9f32c1d9c" Name="Diagram1">
+        <EntityTypeShape EntityType="RedCheetahModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.AdPlan" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.DeviceCode" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.DeviceConnect" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.DeviceInfo" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.DeviceLocation" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.MessageRead" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.Message" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.RC_CHANNELS" Width="1.5" PointX="8" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.RC_LOCATIONS" Width="1.5" PointX="10.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.RC_MODEMS" Width="1.5" PointX="12.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.RC_SECTORS" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.RC_Sessions" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.RCRegisteredDevice" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.RedCheetahUser" Width="1.5" PointX="11.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.ServiceParameter" Width="1.5" PointX="11.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.SwiftSite" Width="1.5" PointX="5.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.sysdiagram" Width="1.5" PointX="7.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.UserToDisableOrEnable" Width="1.5" PointX="9.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RedCheetahModel.RC_MODEM_INFORMATION" Width="1.5" PointX="11.75" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="RedCheetahModel.FK_DeviceConnects_DeviceInfos" ManuallyRouted="false" />
+        <AssociationConnector Association="RedCheetahModel.FK_DeviceLocations_DeviceInfos" ManuallyRouted="false" />
+        <AssociationConnector Association="RedCheetahModel.FK_MessageReads_DeviceInfos" ManuallyRouted="false" />
+        <AssociationConnector Association="RedCheetahModel.FK_Messages_DeviceInfos" ManuallyRouted="false" />
+        <AssociationConnector Association="RedCheetahModel.FK_RC_CHANNELS_RC_SECTORS" ManuallyRouted="false" />
+        <AssociationConnector Association="RedCheetahModel.FK_RC_LOCATIONS_RC_CHANNELS" ManuallyRouted="false" />
+        <AssociationConnector Association="RedCheetahModel.FK_RC_MODEMS_RC_LOCATIONS" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RedCheetahModel.RedCheetahVerification" Width="1.5" PointX="14.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

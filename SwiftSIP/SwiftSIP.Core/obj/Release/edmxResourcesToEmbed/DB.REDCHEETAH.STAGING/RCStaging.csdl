@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RedCheetahModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AdPlan">
+    <Key>
+      <PropertyRef Name="AdPlanId" />
+    </Key>
+    <Property Name="AdPlanId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlanName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NoVideosToPlay" Type="Int32" />
+    <Property Name="NoBannersToShow" Type="Int32" />
+    <Property Name="MinTimeBetweenAds" Type="Int32" />
+    <Property Name="MaxTimeBetwenAds" Type="Int32" />
+    <Property Name="MinDataConsumption" Type="Int32" />
+    <Property Name="MaxDataConsumption" Type="Int32" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MarkedForDeletion" Type="Boolean" />
+    <Property Name="MarkedDeletedDate" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityType Name="DeviceCode">
+    <Key>
+      <PropertyRef Name="DeviceCodesId" />
+    </Key>
+    <Property Name="DeviceCodesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceId" Type="Int32" />
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+  </EntityType>
+  <EntityType Name="DeviceConnect">
+    <Key>
+      <PropertyRef Name="ConnectId" />
+    </Key>
+    <Property Name="ConnectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceId" Type="Int32" Nullable="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MarkedForDeletion" Type="Boolean" />
+    <Property Name="MarkedDeletedDate" Type="DateTime" Precision="7" />
+    <Property Name="IPAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ConnectedTo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DeviceInfo" Relationship="Self.FK_DeviceConnects_DeviceInfos" FromRole="DeviceConnects" ToRole="DeviceInfos" />
+  </EntityType>
+  <EntityType Name="DeviceInfo">
+    <Key>
+      <PropertyRef Name="DeviceId" />
+    </Key>
+    <Property Name="DeviceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SwiftId" Type="Int32" Nullable="false" />
+    <Property Name="AgeRange" Type="Int32" Nullable="false" />
+    <Property Name="Gender" Type="Int32" Nullable="false" />
+    <Property Name="HardwareId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Platform" Type="Int32" Nullable="false" />
+    <Property Name="Version" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FormFactor" Type="Int32" Nullable="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MarkedForDeletion" Type="Boolean" />
+    <Property Name="MarkedDeletedDate" Type="DateTime" Precision="7" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="LastTimeActive" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LastMessageId" Type="Int32" />
+    <Property Name="LastMessageDate" Type="DateTime" Precision="7" />
+    <Property Name="LastConnectId" Type="Int32" />
+    <Property Name="CityOfResidence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InfoType" Type="Int32" Nullable="false" />
+    <Property Name="IPAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MacAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConnectedTo" Type="Int32" Nullable="false" />
+    <Property Name="NotificationID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DeviceConnects" Relationship="Self.FK_DeviceConnects_DeviceInfos" FromRole="DeviceInfos" ToRole="DeviceConnects" />
+    <NavigationProperty Name="DeviceLocations" Relationship="Self.FK_DeviceLocations_DeviceInfos" FromRole="DeviceInfos" ToRole="DeviceLocations" />
+    <NavigationProperty Name="MessageReads" Relationship="Self.FK_MessageReads_DeviceInfos" FromRole="DeviceInfos" ToRole="MessageReads" />
+    <NavigationProperty Name="Messages" Relationship="Self.FK_Messages_DeviceInfos" FromRole="DeviceInfos" ToRole="Messages" />
+  </EntityType>
+  <EntityType Name="DeviceLocation">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceId" Type="Int32" Nullable="false" />
+    <Property Name="Longitude" Type="Double" Nullable="false" />
+    <Property Name="Latitude" Type="Double" Nullable="false" />
+    <Property Name="Altitude" Type="Double" Nullable="false" />
+    <Property Name="Building" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MarkedForDeletion" Type="Boolean" />
+    <Property Name="MarkedDeletedDate" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="DeviceInfo" Relationship="Self.FK_DeviceLocations_DeviceInfos" FromRole="DeviceLocations" ToRole="DeviceInfos" />
+  </EntityType>
+  <EntityType Name="MessageRead">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FromDeviceId" Type="Int32" Nullable="false" />
+    <Property Name="ToDeviceId" Type="Int32" Nullable="false" />
+    <Property Name="MessageType" Type="Int32" Nullable="false" />
+    <Property Name="Parameter1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Parameter2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Parameter3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Parameter4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Parameter5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MarkedForDeletion" Type="Boolean" />
+    <Property Name="MarkedDeletedDate" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="DeviceInfo" Relationship="Self.FK_MessageReads_DeviceInfos" FromRole="MessageReads" ToRole="DeviceInfos" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FromDeviceId" Type="Int32" Nullable="false" />
+    <Property Name="ToDeviceId" Type="Int32" Nullable="false" />
+    <Property Name="MessageType" Type="Int32" Nullable="false" />
+    <Property Name="Parameter1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Parameter2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Parameter3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Parameter4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Parameter5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MarkedForDeletion" Type="Boolean" />
+    <Property Name="MarkedDeletedDate" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="DeviceInfo" Relationship="Self.FK_Messages_DeviceInfos" FromRole="Messages" ToRole="DeviceInfos" />
+  </EntityType>
+  <EntityType Name="RC_CHANNELS">
+    <Key>
+      <PropertyRef Name="CHANNEL_ID" />
+    </Key>
+    <Property Name="CHANNEL_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CHANNEL_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SECTOR_ID" Type="Int32" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="RC_SECTORS" Relationship="Self.FK_RC_CHANNELS_RC_SECTORS" FromRole="RC_CHANNELS" ToRole="RC_SECTORS" />
+    <NavigationProperty Name="RC_LOCATIONS" Relationship="Self.FK_RC_LOCATIONS_RC_CHANNELS" FromRole="RC_CHANNELS" ToRole="RC_LOCATIONS" />
+  </EntityType>
+  <EntityType Name="RC_LOCATIONS">
+    <Key>
+      <PropertyRef Name="LOCATION_ID" />
+    </Key>
+    <Property Name="LOCATION_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LOCATION_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CHANNEL_ID" Type="Int32" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="RC_CHANNELS" Relationship="Self.FK_RC_LOCATIONS_RC_CHANNELS" FromRole="RC_LOCATIONS" ToRole="RC_CHANNELS" />
+    <NavigationProperty Name="RC_MODEMS" Relationship="Self.FK_RC_MODEMS_RC_LOCATIONS" FromRole="RC_LOCATIONS" ToRole="RC_MODEMS" />
+  </EntityType>
+  <EntityType Name="RC_MODEMS">
+    <Key>
+      <PropertyRef Name="MODEM_ID" />
+    </Key>
+    <Property Name="MODEM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CUSTOMER_ID" Type="Int32" Nullable="false" />
+    <Property Name="ACCOUNT_ID" Type="Int32" Nullable="false" />
+    <Property Name="ACCOUNT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LOCATION_ID" Type="Int32" Nullable="false" />
+    <Property Name="IMSI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IP_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="RC_LOCATIONS" Relationship="Self.FK_RC_MODEMS_RC_LOCATIONS" FromRole="RC_MODEMS" ToRole="RC_LOCATIONS" />
+  </EntityType>
+  <EntityType Name="RC_SECTORS">
+    <Key>
+      <PropertyRef Name="SECTOR_ID" />
+    </Key>
+    <Property Name="SECTOR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SECTOR_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <NavigationProperty Name="RC_CHANNELS" Relationship="Self.FK_RC_CHANNELS_RC_SECTORS" FromRole="RC_SECTORS" ToRole="RC_CHANNELS" />
+  </EntityType>
+  <EntityType Name="RC_Sessions">
+    <Key>
+      <PropertyRef Name="SessionId" />
+    </Key>
+    <Property Name="SessionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeviceIMEI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccessPointIPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VPNIPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SessionStartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SessionEndTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="RCRegisteredDevice">
+    <Key>
+      <PropertyRef Name="deviceId" />
+    </Key>
+    <Property Name="deviceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="macAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ageRange" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="creationDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="regStatus" Type="Int32" Nullable="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="agentCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RedCheetahUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IpAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+    <Property Name="AddedToRadius" Type="Boolean" Nullable="false" />
+    <Property Name="DeleteUser" Type="Boolean" Nullable="false" />
+    <Property Name="MacAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IpAddressUpdated" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceParameter">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Frequency" Type="Int32" Nullable="false" />
+    <Property Name="MinMessageTime" Type="Int32" Nullable="false" />
+    <Property Name="MaxMessageTime" Type="Int32" />
+    <Property Name="MinLastMessageTime" Type="Int32" Nullable="false" />
+    <Property Name="url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="url2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SwiftSite">
+    <Key>
+      <PropertyRef Name="SiteID" />
+    </Key>
+    <Property Name="SiteID" Type="Int32" Nullable="false" />
+    <Property Name="SiteName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SiteAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UserToDisableOrEnable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShouldEnable" Type="Boolean" Nullable="false" />
+    <Property Name="Processed" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RC_MODEM_INFORMATION">
+    <Key>
+      <PropertyRef Name="SECTOR_NAME" />
+      <PropertyRef Name="CHANNEL_NAME" />
+      <PropertyRef Name="LOCATION_NAME" />
+      <PropertyRef Name="ACCOUNT_NAME" />
+      <PropertyRef Name="ACCOUNT_ID" />
+    </Key>
+    <Property Name="SECTOR_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CHANNEL_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LOCATION_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ACCOUNT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IMSI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACCOUNT_ID" Type="Int32" Nullable="false" />
+    <Property Name="IP_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_DeviceConnects_DeviceInfos">
+    <End Role="DeviceInfos" Type="Self.DeviceInfo" Multiplicity="1" />
+    <End Role="DeviceConnects" Type="Self.DeviceConnect" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceInfos">
+        <PropertyRef Name="DeviceId" />
+      </Principal>
+      <Dependent Role="DeviceConnects">
+        <PropertyRef Name="DeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeviceLocations_DeviceInfos">
+    <End Role="DeviceInfos" Type="Self.DeviceInfo" Multiplicity="1" />
+    <End Role="DeviceLocations" Type="Self.DeviceLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceInfos">
+        <PropertyRef Name="DeviceId" />
+      </Principal>
+      <Dependent Role="DeviceLocations">
+        <PropertyRef Name="DeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MessageReads_DeviceInfos">
+    <End Role="DeviceInfos" Type="Self.DeviceInfo" Multiplicity="1" />
+    <End Role="MessageReads" Type="Self.MessageRead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceInfos">
+        <PropertyRef Name="DeviceId" />
+      </Principal>
+      <Dependent Role="MessageReads">
+        <PropertyRef Name="ToDeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Messages_DeviceInfos">
+    <End Role="DeviceInfos" Type="Self.DeviceInfo" Multiplicity="1" />
+    <End Role="Messages" Type="Self.Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceInfos">
+        <PropertyRef Name="DeviceId" />
+      </Principal>
+      <Dependent Role="Messages">
+        <PropertyRef Name="ToDeviceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RC_CHANNELS_RC_SECTORS">
+    <End Role="RC_SECTORS" Type="Self.RC_SECTORS" Multiplicity="1" />
+    <End Role="RC_CHANNELS" Type="Self.RC_CHANNELS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RC_SECTORS">
+        <PropertyRef Name="SECTOR_ID" />
+      </Principal>
+      <Dependent Role="RC_CHANNELS">
+        <PropertyRef Name="SECTOR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RC_LOCATIONS_RC_CHANNELS">
+    <End Role="RC_CHANNELS" Type="Self.RC_CHANNELS" Multiplicity="1" />
+    <End Role="RC_LOCATIONS" Type="Self.RC_LOCATIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RC_CHANNELS">
+        <PropertyRef Name="CHANNEL_ID" />
+      </Principal>
+      <Dependent Role="RC_LOCATIONS">
+        <PropertyRef Name="CHANNEL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RC_MODEMS_RC_LOCATIONS">
+    <End Role="RC_LOCATIONS" Type="Self.RC_LOCATIONS" Multiplicity="1" />
+    <End Role="RC_MODEMS" Type="Self.RC_MODEMS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RC_LOCATIONS">
+        <PropertyRef Name="LOCATION_ID" />
+      </Principal>
+      <Dependent Role="RC_MODEMS">
+        <PropertyRef Name="LOCATION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RCStaging" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="AdPlans" EntityType="Self.AdPlan" />
+    <EntitySet Name="DeviceCodes" EntityType="Self.DeviceCode" />
+    <EntitySet Name="DeviceConnects" EntityType="Self.DeviceConnect" />
+    <EntitySet Name="DeviceInfos" EntityType="Self.DeviceInfo" />
+    <EntitySet Name="DeviceLocations" EntityType="Self.DeviceLocation" />
+    <EntitySet Name="MessageReads" EntityType="Self.MessageRead" />
+    <EntitySet Name="Messages" EntityType="Self.Message" />
+    <EntitySet Name="RC_CHANNELS" EntityType="Self.RC_CHANNELS" />
+    <EntitySet Name="RC_LOCATIONS" EntityType="Self.RC_LOCATIONS" />
+    <EntitySet Name="RC_MODEMS" EntityType="Self.RC_MODEMS" />
+    <EntitySet Name="RC_SECTORS" EntityType="Self.RC_SECTORS" />
+    <EntitySet Name="RC_Sessions" EntityType="Self.RC_Sessions" />
+    <EntitySet Name="RCRegisteredDevices" EntityType="Self.RCRegisteredDevice" />
+    <EntitySet Name="RedCheetahUsers" EntityType="Self.RedCheetahUser" />
+    <EntitySet Name="ServiceParameters" EntityType="Self.ServiceParameter" />
+    <EntitySet Name="SwiftSites" EntityType="Self.SwiftSite" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="UserToDisableOrEnables" EntityType="Self.UserToDisableOrEnable" />
+    <EntitySet Name="RC_MODEM_INFORMATION" EntityType="Self.RC_MODEM_INFORMATION" />
+    <AssociationSet Name="FK_DeviceConnects_DeviceInfos" Association="Self.FK_DeviceConnects_DeviceInfos">
+      <End Role="DeviceInfos" EntitySet="DeviceInfos" />
+      <End Role="DeviceConnects" EntitySet="DeviceConnects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeviceLocations_DeviceInfos" Association="Self.FK_DeviceLocations_DeviceInfos">
+      <End Role="DeviceInfos" EntitySet="DeviceInfos" />
+      <End Role="DeviceLocations" EntitySet="DeviceLocations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MessageReads_DeviceInfos" Association="Self.FK_MessageReads_DeviceInfos">
+      <End Role="DeviceInfos" EntitySet="DeviceInfos" />
+      <End Role="MessageReads" EntitySet="MessageReads" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Messages_DeviceInfos" Association="Self.FK_Messages_DeviceInfos">
+      <End Role="DeviceInfos" EntitySet="DeviceInfos" />
+      <End Role="Messages" EntitySet="Messages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RC_CHANNELS_RC_SECTORS" Association="Self.FK_RC_CHANNELS_RC_SECTORS">
+      <End Role="RC_SECTORS" EntitySet="RC_SECTORS" />
+      <End Role="RC_CHANNELS" EntitySet="RC_CHANNELS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RC_LOCATIONS_RC_CHANNELS" Association="Self.FK_RC_LOCATIONS_RC_CHANNELS">
+      <End Role="RC_CHANNELS" EntitySet="RC_CHANNELS" />
+      <End Role="RC_LOCATIONS" EntitySet="RC_LOCATIONS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RC_MODEMS_RC_LOCATIONS" Association="Self.FK_RC_MODEMS_RC_LOCATIONS">
+      <End Role="RC_LOCATIONS" EntitySet="RC_LOCATIONS" />
+      <End Role="RC_MODEMS" EntitySet="RC_MODEMS" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(RedCheetahModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(RedCheetahModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="RedCheetahVerifications" EntityType="RedCheetahModel.RedCheetahVerification" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="RedCheetahVerification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Guid" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="VerificationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TimeStamp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VerificationStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

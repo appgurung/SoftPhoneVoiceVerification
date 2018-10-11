@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftPhone.API", "SwiftSIP.API\SoftPhone.API.csproj", "{667CCA13-527D-4ED1-AE47-97679805429C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftPhone.Infrastructure", "SwiftSIP.Infrastructure\SoftPhone.Infrastructure.csproj", "{32525D18-AECC-4976-9FD6-29FD3FE16FE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftPhone.Core", "SwiftSIP.Core\SoftPhone.Core.csproj", "{5F863D70-DFFE-4019-BCA4-2EE938455070}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftPhone.Test", "SwiftSIP.Test\SoftPhone.Test.csproj", "{B251E4BE-6AAE-46B3-ADAE-B0627EBC2472}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{667CCA13-527D-4ED1-AE47-97679805429C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667CCA13-527D-4ED1-AE47-97679805429C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667CCA13-527D-4ED1-AE47-97679805429C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667CCA13-527D-4ED1-AE47-97679805429C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32525D18-AECC-4976-9FD6-29FD3FE16FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32525D18-AECC-4976-9FD6-29FD3FE16FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32525D18-AECC-4976-9FD6-29FD3FE16FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32525D18-AECC-4976-9FD6-29FD3FE16FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F863D70-DFFE-4019-BCA4-2EE938455070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F863D70-DFFE-4019-BCA4-2EE938455070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F863D70-DFFE-4019-BCA4-2EE938455070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F863D70-DFFE-4019-BCA4-2EE938455070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B251E4BE-6AAE-46B3-ADAE-B0627EBC2472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B251E4BE-6AAE-46B3-ADAE-B0627EBC2472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B251E4BE-6AAE-46B3-ADAE-B0627EBC2472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B251E4BE-6AAE-46B3-ADAE-B0627EBC2472}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A09539E5-0E6E-4003-B9E0-D9E532DC8ED8}
+	EndGlobalSection
+EndGlobal
